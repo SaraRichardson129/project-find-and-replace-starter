@@ -36,10 +36,8 @@ replaceAllButton.addEventListener('click', function () {
             if (inputString.innerHTML.includes(findInputString)) {
                 inputString.innerHTML = inputString.innerHTML.replace(findInputString, replaceInputString)
                 console.log(inputString)
-
             }
         }
-
     }
 })
 
