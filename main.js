@@ -31,28 +31,16 @@ replaceAllButton.addEventListener('click', function () {
 
         let cellElement = getCellElements(currentRowElement)
         for (let innerIndex = 0; innerIndex < cellElement.length; innerIndex += 1) {
-            const inputString = cellElement[index];
+            const inputString = cellElement[innerIndex];
 
             if (inputString.innerHTML.includes(findInputString)) {
-                let currentInput = inputString.innerHTML.replace(findInputString, replaceInputString)
-                console.log(currentInput)
-                return currentInput
+                inputString.innerHTML = inputString.innerHTML.replace(findInputString, replaceInputString)
+                console.log(inputString)
+
             }
         }
 
     }
 })
 
-// One last thing: dedicate very careful attention to using variables and
-// naming them accurately.
-// And when you change the value you are assigning to a variable, don't
-// forget to consider changing the name to reflect the change you made! It
-// is very easy to get confused when you are working inside NESTED LOOPS.
-// The best of us do. And unnecessary confusion during the process of 
-// developing your code means wasted time.
-//
-// The time-cost of structuring and naming things well is FAR less than the
-// time-cost of ignoring the quality and readability of your code.
-//
-// You can, of course, remove any comments in this starter project once
-// you have read them, if you prefer.
+
